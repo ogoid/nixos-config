@@ -1,10 +1,10 @@
 {
   boot = {
 
-    tmp = {
-      useTmpfs = false;
-      cleanOnBoot = true;
-    };
+    # tmp = {
+    #   useTmpfs = false;
+    #   cleanOnBoot = true;
+    # };
 
     loader = {
       timeout = 2;

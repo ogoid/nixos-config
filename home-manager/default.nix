@@ -18,6 +18,8 @@
       (import ./shell.nix)
       (import ./programs.nix)
       (import ./vscode.nix)
+      (import ./book-scan.nix)
+      (import ./machine-learning.nix)
     ];
 
     nixpkgs = {
