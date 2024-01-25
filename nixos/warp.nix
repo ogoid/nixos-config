@@ -5,6 +5,7 @@
 
   systemd.services.warp-svc = {
     after = [ "network-online.target" "systemd-resolved.service" ];
+    wants = [ "network-online.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       # DynamicUser = true;
