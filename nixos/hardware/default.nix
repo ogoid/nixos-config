@@ -10,7 +10,7 @@
 
     # ./tpm.nix
 
-    # ./wifi.nix
+    ./wifi.nix
 
     ./brightness.nix
 
