@@ -1,7 +1,7 @@
 {
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "br";
-    xkbVariant = "";
+    variant = "";
   };
 
   console.keyMap = "br-abnt2";

@@ -2,17 +2,22 @@
 {
   environment.systemPackages = [ pkgs.distrobox ];
 
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    enableNvidia = true;
-  };
+  virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
 
-  virtualisation.containers.policy = {
-    default = [ { type = "insecureAcceptAnything"; } ];
-    transports = {
-      docker-daemon = {
-        "" = [ { type = "insecureAcceptAnything"; } ];
+    containers = {
+      cdi.dynamic.nvidia.enable = true;
+
+      policy = {
+        default = [ { type = "insecureAcceptAnything"; } ];
+        transports = {
+          docker-daemon = {
+            "" = [ { type = "insecureAcceptAnything"; } ];
+          };
+        };
       };
     };
   };

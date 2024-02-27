@@ -1,8 +1,8 @@
 { pkgs, config, ... }: {
 
   nix = {
-    package = pkgs.nixFlakes;
-    registry.nixpkgs.flake = pkgs.nixFlakes;
+    # package = pkgs.nixFlakes;
+    # registry.nixpkgs.flake = pkgs.nixFlakes;
     optimise.automatic = true;
     gc.automatic = true;
     gc.options = "--delete-older-than 5d";
