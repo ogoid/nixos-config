@@ -9,9 +9,8 @@
     tree
     file
     unzip
-    nixfmt
+    nixfmt-classic
     nixd
-    rnix-lsp
     cachix
     chromium
     nerdfonts
