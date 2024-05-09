@@ -2,6 +2,8 @@
 {
   environment.systemPackages = [ pkgs.distrobox ];
 
+  hardware.nvidia-container-toolkit.enable = true;
+
   virtualisation = {
     podman = {
       enable = true;
@@ -9,8 +11,6 @@
     };
 
     containers = {
-      cdi.dynamic.nvidia.enable = true;
-
       policy = {
         default = [ { type = "insecureAcceptAnything"; } ];
         transports = {

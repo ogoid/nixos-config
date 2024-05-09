@@ -5,7 +5,6 @@
     common-pc-ssd
     common-hidpi
     common-cpu-intel
-    common-gpu-intel
     #  common-gpu-nvidia
 
     # ./tpm.nix
