@@ -2,7 +2,6 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
-    vim
     wget
     gparted
     compsize
@@ -61,6 +60,7 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  programs.vim.enable = true;
   programs.vim.defaultEditor = true;
 
   programs.nix-ld.enable = true;
