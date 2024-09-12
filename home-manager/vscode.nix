@@ -4,11 +4,8 @@ let
 
   # inherit (pkgs) vscode-extensions;
   vscode-extensions =
-    inputs.nix-vscode-extensions
-    .extensions."${system}"
-    .vscode-marketplace;
-in
-{
+    inputs.nix-vscode-extensions.extensions."${system}".vscode-marketplace;
+in {
 
   programs.vscode = {
     enable = true;

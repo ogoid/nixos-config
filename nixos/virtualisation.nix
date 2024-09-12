@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   environment.systemPackages = [ pkgs.distrobox ];
 
   hardware.nvidia-container-toolkit.enable = true;
@@ -12,11 +11,9 @@
 
     containers = {
       policy = {
-        default = [ { type = "insecureAcceptAnything"; } ];
+        default = [{ type = "insecureAcceptAnything"; }];
         transports = {
-          docker-daemon = {
-            "" = [ { type = "insecureAcceptAnything"; } ];
-          };
+          docker-daemon = { "" = [{ type = "insecureAcceptAnything"; }]; };
         };
       };
     };

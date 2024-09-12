@@ -8,7 +8,7 @@
 
   # driver source:
   # https://gitlab.freedesktop.org/libfprint/libfprint/-/blob/master/libfprint/drivers/elan.c
-  
+
   # services.fprintd.enable = true;
   # services.fprintd.tod.enable = true;
   # services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;

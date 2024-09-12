@@ -19,10 +19,10 @@
         libvdpau-va-gl
       ];
     };
-    
+
     nvidia = {
       open = false;
-      
+
       nvidiaPersistenced = false;
       powerManagement.enable = lib.mkDefault true;
 

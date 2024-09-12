@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     calibre
     imagemagick
@@ -10,5 +9,5 @@
     qpdf
     scantailor-advanced
     ghostscript
- ];
+  ];
 }
