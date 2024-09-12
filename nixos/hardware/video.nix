@@ -1,9 +1,14 @@
 { pkgs, lib, ... }: {
 
+  nixpkgs.config = {
+    allowUnfree = true;
+    nvidia.acceptLicense = true;
+  };
+
   services.xserver.videoDrivers = [ "intel" "nvidia" ];
 
   hardware = {
-    # bumblebee.enable = true;
+    bumblebee.enable = true;
 
     graphics = {
       enable = true;
@@ -16,15 +21,17 @@
     };
     
     nvidia = {
-      nvidiaPersistenced = true;
+      open = false;
+      
+      nvidiaPersistenced = false;
       powerManagement.enable = lib.mkDefault true;
 
-      modesetting.enable = true;
-      prime = {
-        # sync.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
+      modesetting.enable = false;
+      # prime = {
+      #   # sync.enable = true;
+      #   intelBusId = "PCI:0:2:0";
+      #   nvidiaBusId = "PCI:1:0:0";
+      # };
     };
   };
 
@@ -36,4 +43,9 @@
     intel-media-driver
     v4l-utils
   ];
+
+  environment.sessionVariables = {
+    LD_LIBRARY_PATH = "/run/opengl-driver/lib";
+    CUDA_HOME = pkgs.cudatoolkit;
+  };
 }
